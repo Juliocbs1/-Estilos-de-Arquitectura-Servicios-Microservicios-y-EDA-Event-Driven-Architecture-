@@ -13,3 +13,17 @@ eureka:
       hostname: localhost
       statusPageUrlPath: http://localhost:8080/actuator/info
       healthCheckUrlPath: http://localhost:8080/actuator/health
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: Products-Service
+    description: Microservicios de productos
+    version: 1.0.0
