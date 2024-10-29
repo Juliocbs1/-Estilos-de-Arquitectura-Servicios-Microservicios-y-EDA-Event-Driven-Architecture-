@@ -21,7 +21,6 @@ management:
   info:
     env:
       enabled: true
-
 info:
   app:
     name: Checkout-Service
