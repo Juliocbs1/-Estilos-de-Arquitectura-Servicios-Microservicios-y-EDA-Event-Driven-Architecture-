@@ -1,6 +1,9 @@
 spring:
   application:
     name: checkout-service
+  loadbalancer:
+    client:
+      name: products-service
 
 server:
   port: 8070
