@@ -30,3 +30,8 @@ info:
     name: Checkout-Service
     description: Microservicios de checkout de productos
     version: 1.0.0
+# Configuración de logging para Feign Client
+logging:
+  level:
+    feign:
+      client: DEBUG # Habilitar logging de Feign Client
