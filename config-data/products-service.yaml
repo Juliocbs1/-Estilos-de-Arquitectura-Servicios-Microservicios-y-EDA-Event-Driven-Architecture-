@@ -3,7 +3,7 @@ spring:
     name: products-service
 
 server:
-  port: 8080
+  port: ${PORT:${SERVER_PORT:0}} #Elige el primer que encuentre que no este usado
 
 eureka:
   client:
@@ -12,9 +12,10 @@ eureka:
     service-url:
       default-zone: http://localhost:8761/eureka
   instance:
-    hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} #Un puerto aleatorio
     statusPageUrlPath: /actuator/info
     healthCheckUrlPath: /actuator/health
+    
 
 management:
   endpoints:
