@@ -30,3 +30,7 @@ info:
     name: Products-Service
     description: Microservicios de productos
     version: 1.0.0
+
+
+instance:
+  id: ${HOSTNAME:default}-instance
