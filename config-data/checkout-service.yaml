@@ -40,3 +40,4 @@ logging:
   level:
     feign:
       client: DEBUG # Habilitar logging de Feign Client
+    co.edu.unbosque.sw2.checkout_service.feighnclients: DEBUG
