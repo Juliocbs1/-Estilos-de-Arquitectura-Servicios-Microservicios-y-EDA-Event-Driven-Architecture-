@@ -16,7 +16,7 @@ eureka:
     statusPageUrlPath: /actuator/info
     healthCheckUrlPath: /actuator/health
     metadata-map:
-      weight: 20
+      weight: 80
 
 management:
   endpoints:
