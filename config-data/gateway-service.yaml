@@ -38,4 +38,4 @@ info:
     - Id: checkout-service 
     - uri: lb://checkout-service 
     - predicates:  
-      - Path=/checkout
+      - Path=/checkout/**
