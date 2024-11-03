@@ -16,7 +16,6 @@ eureka:
       default-zone: http://localhost:8761/eureka
   instance:
     hostname: localhost
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} # ID de la instancia
     statusPageUrlPath: /actuator/info
     healthCheckUrlPath: /actuator/health
 
@@ -34,10 +33,3 @@ info:
     name: Checkout-Service
     description: Microservicios de checkout de productos
     version: 1.0.0
-
-# Configuración de logging para Feign Client
-logging:
-  level:
-    feign:
-      client: DEBUG # Habilitar logging de Feign Client
-    co.edu.unbosque.sw2.checkout_service.feighnclients: DEBUG
