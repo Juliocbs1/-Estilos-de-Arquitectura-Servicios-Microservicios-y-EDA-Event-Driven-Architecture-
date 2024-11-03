@@ -4,6 +4,7 @@ spring:
   loadbalancer:
     client:
       name: products-service
+    configurations: weighted
 
 server:
   port: 8070
