@@ -16,7 +16,7 @@ eureka:
     service-url:
       default-zone: http://localhost:8761/eureka
   instance:
-    hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} # Genera un id aleatorio basado en el puerto
     statusPageUrlPath: /actuator/info
     healthCheckUrlPath: /actuator/health
 
