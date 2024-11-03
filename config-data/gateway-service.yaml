@@ -11,6 +11,8 @@ spring:
           uri: lb://checkout-service
           predicates:
             - Path=/api/checkout/**
+          filters:
+            - AddRequestHeader=x-request-from,gateway
 
 eureka:
   client:
