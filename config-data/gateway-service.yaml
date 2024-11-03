@@ -1,15 +1,38 @@
 server:
  port: 8383
 spring:
- config:
-  import: "optional:configserver"
  application:
   name: gateway-service
  cloud:
   discovery:
    serviceId: config-server
    enabled: true
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: gateway-service
+    description: Configuracion de API
+    version: 1.0.0
+   
   gateway: 
    routes: 
     - Id: checkout-service 
