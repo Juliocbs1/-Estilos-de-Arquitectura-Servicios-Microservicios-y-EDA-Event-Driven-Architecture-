@@ -1,5 +1,6 @@
 server:
- port: 8383
+  port: 8383
+
 spring:
   application:
     name: gateway-service
@@ -10,6 +11,7 @@ spring:
           uri: lb://checkout-service
           predicates:
             - Path=/api/checkout/**
+
 eureka:
   client:
     fetch-registry: true
@@ -35,3 +37,8 @@ info:
     name: gateway-service
     description: Configuracion de API
     version: 1.0.0
+
+# Configuración de logs en nivel DEBUG para ver la coincidencia de rutas en Spring Cloud Gateway
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
