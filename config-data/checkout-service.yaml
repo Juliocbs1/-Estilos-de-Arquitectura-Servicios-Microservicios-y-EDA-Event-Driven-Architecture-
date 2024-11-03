@@ -7,7 +7,7 @@ spring:
     configurations: weighted
 
 server:
-  port: 8070
+  port: ${PORT:${SERVER_PORT:0}} # Elige el primer puerto que encuentre que no esté en uso
 
 eureka:
   client:
