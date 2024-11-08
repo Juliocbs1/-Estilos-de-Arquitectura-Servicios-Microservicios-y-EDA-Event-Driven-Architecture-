@@ -45,9 +45,3 @@ logging:
   level:
     org.springframework.cloud.gateway: DEBUG
 #Configuracion  auth0
-com:
-  auth0:
-    domain: dev-2qk1lcy5ak3lc6s6.us.auth0.com
-    clientId: x1hhpraadic1LUC474sWhMnBgAbjZWnw
-    clientSecret: La62_hdDema2tMZdmRQcQjRVvieK8LTDLONWxxcwo6Dbo5D5nXs_07nyVoFPAQ7C
-
