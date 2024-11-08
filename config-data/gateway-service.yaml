@@ -10,7 +10,7 @@ spring:
         - id: checkout-service
           uri: lb://checkout-service
           predicates:
-            - Path=/api/checkout/**
+            - Path=/home/**
           filters:
             - AddRequestHeader=x-request-from,gateway
 okta:
