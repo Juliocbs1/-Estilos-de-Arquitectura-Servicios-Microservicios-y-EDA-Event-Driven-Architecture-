@@ -6,6 +6,11 @@ spring:
       name: products-service
     configurations: weighted
 
+okta:
+  oauth2:
+    issuer: https://dev-2qk1lcy5ak3lc6s6.us.auth0.com/
+    audience: ${okta.oauth2.issuer}api/v2/
+
 server:
   port: ${PORT:${SERVER_PORT:0}} # Elige el primer puerto que encuentre que no esté en uso
 
