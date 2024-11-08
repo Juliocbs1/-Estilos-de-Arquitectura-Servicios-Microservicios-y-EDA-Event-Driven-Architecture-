@@ -13,6 +13,12 @@ spring:
             - Path=/api/checkout/**
           filters:
             - AddRequestHeader=x-request-from,gateway
+okta:
+  oauth2:
+    issuer: https://dev-2qk1lcy5ak3lc6s6.nosotros.autenticación0.COM/
+    client-id: x1hhpraadic1LUC474sWhMnBgAbjZWnw
+    client-secret: x1hhpraadic1LUC474sWhMnBgAbjZWnw
+    audience: ${okta.oauth2.issuer}api/v2/
 
 eureka:
   client:
