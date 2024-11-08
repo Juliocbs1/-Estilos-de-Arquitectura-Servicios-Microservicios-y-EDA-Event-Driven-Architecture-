@@ -6,6 +6,8 @@ spring:
     name: gateway-service
   cloud:
     gateway:
+      default-filters:
+        - TokenRelay
       routes:
         - id: checkout-service
           uri: lb://checkout-service
