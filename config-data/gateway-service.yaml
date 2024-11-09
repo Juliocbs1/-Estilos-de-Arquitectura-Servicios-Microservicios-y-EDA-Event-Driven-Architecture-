@@ -15,7 +15,7 @@ spring:
         - id: checkout-service
           uri: lb://checkout-service
           predicates:
-            - Path=/api/checkout**
+            - Path=/api/checkout/**
           
   openfeign:
     oauth2:
