@@ -23,6 +23,7 @@ okta:
     client-id: x1hhpraadic1LUC474sWhMnBgAbjZWnw
     client-secret: La62_hdDema2tMZdmRQcQjRVvieK8LTDLONWxxcwo6Dbo5D5nXs_07nyVoFPAQ7C
     audience: https://dev-2qk1lcy5ak3lc6s6.us.auth0.com/api/v2/
+    groupsClaim: https://spring-boot.example.com/roles  # Propiedad añadida para obtener grupos de usuarios desde Okta
 
 eureka:
   client:
@@ -53,4 +54,5 @@ info:
 logging:
   level:
     org.springframework.cloud.gateway: DEBUG
+
 
