@@ -4,7 +4,7 @@ server:
 spring:
   application:
     name: gateway-service
- cloud:
+  cloud:
     gateway:
       discovery:
         locator:
@@ -16,6 +16,7 @@ spring:
           uri: lb://checkout-service
           predicates:
             - Path=/home/**
+
 okta:
   oauth2:
     issuer: https://dev-2qk1lcy5ak3lc6s6.us.auth0.com/
@@ -49,8 +50,8 @@ info:
     description: Configuracion de API
     version: 1.0.0
 
-# Configuración de logs en nivel DEBUG para ver la coincidencia de rutas en Spring Cloud Gateway
 logging:
   level:
     org.springframework.cloud.gateway: DEBUG
+
 #Configuracion  auth0
