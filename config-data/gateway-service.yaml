@@ -19,7 +19,6 @@ okta:
     client-id: x1hhpraadic1LUC474sWhMnBgAbjZWnw
     client-secret: La62_hdDema2tMZdmRQcQjRVvieK8LTDLONWxxcwo6Dbo5D5nXs_07nyVoFPAQ7C
     audience: ${okta.oauth2.issuer}api/v2/
-    logout-uri: https://dev-2qk1lcy5ak3lc6s6.us.auth0.com/v2/logout
 
 eureka:
   client:
