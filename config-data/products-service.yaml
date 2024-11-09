@@ -42,4 +42,10 @@ info:
     name: Products-Service
     description: Microservicios de productos
     version: 1.0.0
-
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-2qk1lcy5ak3lc6s6.us.auth0.com/  # URL del issuer de Okta
+          jwk-set-uri: https://dev-2qk1lcy5ak3lc6s6.us.auth0.com/oauth/token  # URL para obtener las claves públicas
