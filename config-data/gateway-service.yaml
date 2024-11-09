@@ -16,6 +16,11 @@ spring:
           uri: lb://checkout-service
           predicates:
             - Path=/api/checkout/**
+          
+  openfeign:
+    oauth2:
+      enabled: true
+    clientRegistrationId: okta
 
 okta:
   oauth2:
