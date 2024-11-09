@@ -12,7 +12,7 @@ spring:
         - id: checkout-service
           uri: lb://checkout-service
           predicates:
-            - Path=/home/**
+            - Path=/api/checkout/**
 okta:
   oauth2:
     issuer: https://dev-2qk1lcy5ak3lc6s6.us.auth0.com/
