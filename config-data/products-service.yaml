@@ -2,6 +2,11 @@ spring:
   application:
     name: products-service
 
+  openfeign:
+    oauth2:
+      enabled: true
+    clientRegistrationId: okta
+
 okta:
   oauth2:
     issuer: https://dev-2qk1lcy5ak3lc6s6.us.auth0.com/
@@ -37,3 +42,4 @@ info:
     name: Products-Service
     description: Microservicios de productos
     version: 1.0.0
+
