@@ -4,8 +4,11 @@ server:
 spring:
   application:
     name: gateway-service
-  cloud:
+ cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       default-filters:
         - TokenRelay
       routes:
