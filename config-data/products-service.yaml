@@ -13,7 +13,7 @@ okta:
     audience: https://dev-2qk1lcy5ak3lc6s6.us.auth0.com/api/v2/
 
 server:
-  port: ${PORT:${SERVER_PORT:0}} # Elige el primer puerto que encuentre que no esté en uso
+  port: ${PORT:${SERVER_PORT:0}}
 
 eureka:
   client:
@@ -22,7 +22,7 @@ eureka:
     service-url:
       default-zone: http://localhost:8761/eureka
   instance:
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} # Genera un id aleatorio basado en el puerto
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     statusPageUrlPath: /actuator/info
     healthCheckUrlPath: /actuator/health
     metadata-map:
@@ -42,10 +42,11 @@ info:
     name: Products-Service
     description: Microservicios de productos
     version: 1.0.0
+
 spring:
   security:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: https://dev-2qk1lcy5ak3lc6s6.us.auth0.com/  # URL del issuer de Okta
-          jwk-set-uri: https://dev-2qk1lcy5ak3lc6s6.us.auth0.com/oauth/token  # URL para obtener las claves públicas
+          issuer-uri: https://dev-2qk1lcy5ak3lc6s6.us.auth0.com/
+          jwk-set-uri: https://dev-2qk1lcy5ak3lc6s6.us.auth0.com/.well-known/jwks.json
